@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-ohw7{background-color:#F8CBAD;font-family:Arial, Helvetica, sans-serif !important;font-size:10px;font-weight:bold;
+            text-align:left;vertical-align:middle}
+        .tg .tg-r58f{font-family:Arial, Helvetica, sans-serif !important;font-size:10px;text-align:center;vertical-align:middle}
+        .tg .tg-w452{background-color:#F8CBAD;font-family:Arial, Helvetica, sans-serif !important;font-size:10px;text-align:center;
+            vertical-align:middle}
+        .tg .tg-8p5g{background-color:#FFE699;font-family:Arial, Helvetica, sans-serif !important;font-size:10px;font-weight:bold;
+            text-align:left;vertical-align:middle}
+        .tg .tg-gk99{background-color:#288BF8;font-family:Arial, Helvetica, sans-serif !important;font-size:10px;font-weight:bold;
+            text-align:center;vertical-align:middle}
+        .tg .tg-eetp{background-color:#FFE699;font-family:Arial, Helvetica, sans-serif !important;font-size:10px;text-align:center;
+            vertical-align:middle}
+        .tg .tg-xeof{font-family:Arial, Helvetica, sans-serif !important;font-size:10px;text-align:left;vertical-align:middle}
+        .tg .tg-9h7j{color:#F00;font-family:Arial, Helvetica, sans-serif !important;font-size:10px;text-align:left;vertical-align:middle}
+        #clock{
+            color:white;
+            font: 2em sans-serif; 
+            background: black; 
+            margin: 5px;
+             padding: 5px;
+            border: solid gray 2px; 
+            border-radius: 10px;
+            width:160px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">T E L</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SCCM
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- <li><a class="dropdown-item" target="_blank" href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_CU_PRGT_RDL%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">CU_PRGT_RDL</a>
+                  </li> -->
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_CU_SCCM%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">CU_SCCM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            DRMP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_DRMP_LA%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_DRMP_LA</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_DRMP_SP%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_DRMP_SP</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SDRM
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_NIT_SDRM_EB%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">NIT_SDRM_EB</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM_29%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM_29</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM_CLN%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM_CLN</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM_MLD%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM_MLD</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM_SP%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM_SP</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM_SP_150%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM_SP_150</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM_SP_LT%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM_SP_LT</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SDRM2
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM2%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM2</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM2_140%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM2_140</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM2_150%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM2_150</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM2_ARC%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM2_ARC</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_SDRM2_CELL%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_SDRM2_CELL</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            RK3/RK5/LK3
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_VIGUS-LK3%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_VIGUS-LK3</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_VIGUS-RK3%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_VIGUS-RK3</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_VIGUS-RK3_HARC%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_VIGUS-RK3_HARC</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_VIGUS-RK5%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_VIGUS-RK5</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            NV4
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_PLY_VESTA-NV4%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">PLY_VESTA-NV4</a>
+                            </li>
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_PLY_VESTA-NV4_49%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">PLY_VESTA-NV4_42</a>
+                            </li>
+
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_PLY_VESTA-NV4_49%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">PLY_VESTA-NV4_49</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            F1000
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank"
+                                    href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Troubleshoot&c.Param=%7B%22area%22:%22F11%20DRY%20ETCH%22,%22wsg%22:%2211-DRY_OX_F1000%22,%22step%22:%22ALL%22,%22demand%22:%22EOH%22,%22moveRange%22:%220%22,%22mtasRange%22:%220%22,%22lotType%22:%22PRODUCTION%22,%22flowUnit%22:%22ALL%22,%22technode%22:%22ALL%22,%22stepDs%22:%22N%22,%22userGroup%22:%22Default%22,%22viewType%22:%22Owning%20Total%22%7D">OX_F1000</a>
+                            </li>
+
+                        </ul>
+                    </li>
+            </div>
+        </div>
+    </nav>
+</div><hr class="dropdown-divider">
+<div class="iframe">
+  <iframe allowfullscreen style="display: none" frameborder="1" height="500" width=100% name="Dummy" src="search.html"></iframe>
+
+</div>
+
+    <div class="d-grid gap-2 d-md-block">
+        <a href="https://microncorp.sharepoint.com/sites/grpMTTWDEAMATTELoneteam" target="_blank" class="btn btn-primary" type="button">課網頁</a>
+        <a href="https://www.telcustomer.com/home/home.do" target="_blank" class="btn btn-primary" type="button">TEL官網查料</a>
+        <a href="http://tywpeetest1/PEE1/MATREQ/Parts_arrival.aspx" target="_blank" class="btn btn-primary" type="button">到料查詢</a>
+        <a href="http://tywbdprod02/ChangePatrolWW/MainPage.aspx" target="_blank" class="btn btn-warning" type="button">Change Patrol</a>
+        <a href="http://tylcheckmweb01/f11checkm/production/" target="_blank" class="btn btn-warning" type="button">CheckM</a>
+        <a href="http://edc.micron.com/F11/FAB011/Lists/Daily%20PMON%20OOC%20tracing%20table/AllItems.aspx#InplviewHash2b739c77-74cb-4385-a3ad-a9e4e30648c6=Paged%3DTRUE-p_ID%3D70-ShowInGrid%3DTrue-PageFirstRow%3D61" target="_blank" class="btn btn-warning" type="button">PMON OOC</a>
+        <a href="https://app.powerbi.com/groups/2f1112df-ffb8-495f-9059-394e23c4fd54/reports/8f1edbba-ca6e-437f-8b80-b6b065f9c62c/ReportSection4ef5a8fa7a6014a595eb" target="_blank" class="btn btn-warning" type="button">圖書館</a>
+        <a href="http://tywpeetest1/PEE/RPAC/EH/main.asp?R_module=EH&R_sort=EQUIP_ID&R_TW=1" target="_blank" class="btn btn-outline-secondary" type="button">Dummy</a>
+        <a href="http://tywpeetest1/PEE/LOT/Qual_Main.asp" target="_blank" class="btn btn-outline-secondary" type="button">Dummy2</a>
+        <a href="http://tywpeetest1/PEE1/qual/Default.aspx" target="_blank" class="btn btn-outline-secondary" type="button">SPC review</a>
+<!--         <a href="file:///H:/MTTW/Temp/F11%20DRY%20ETCH/UIPath/maxtuan/Passdown/SN.html" target="_blank" class="btn btn-outline-secondary" type="button">PM_recovery</a>
+ -->        <a href="http://tylfdlimits01:8090/FDCWeb/Graph/tipchronicrpt.jsp?facility_id=F16,F11,F16C&highlight_level=M2&last_days=3&area=DE" target="_blank" class="btn btn-success" type="button">M2</a>
+        <a href="http://tylfdlimits01:8090/FDCWeb/Graph/tipchronicrpt.jsp?facility_id=F16,F11,F16C&highlight_level=M3&last_days=3&area=DE" target="_blank" class="btn btn-success" type="button">M3</a>
+        <a href="https://tableau-apac/#/site/F11FEMFG/views/F11_QE_CSM_TWN_SPC_PMON_ChronicOOC_Lab/PMONM1OOC/calixhuang@na.micron.com/F11_DE_Lam?:iid=1" target="_blank" class="btn btn-success" type="button">PMON Case</a>
+        <a href="https://tableau-apac/t/F11FEMFG/views/F11_QE_CSM_SPC_QualChart_ChronicOOC_Lab/M1OOC?iframeSizedToWindow=true&%3Aembed=y&%3AshowAppBanner=false&%3Adisplay_count=no&%3AshowVizHome=no#1" target="_blank" class="btn btn-success" type="button">ER Case</a>
+        <a href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-EOH&c.View=Laser%20Focus" target="_blank" class="btn btn-secondary" type="button">Lasor Focus</a>
+        <a href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=DMS%20ORION&c.View=Table&c.Role=DE%20Equipment%20Shift%20Engineering&f.Type=FTIP-FD-QT-SPCECAP-SPCRDA-STIP-TA-TTIP&f.Status=PEND-PROG&f.Owner=TEAM&f.Search=&f.WSG=off&s.Sort=AAD" target="_blank" class="btn btn-secondary" type="button">ORION</a>
+        <a href="https://tywbdprod02.tytw.micron.com:4002/STIM/" target="_blank" class="btn btn-secondary" type="button">STIM</a>
+        <a href="https://o2-instance.apps.ty-ose-mfgt1a-prod.tytw.micron.com/xWeb-arno/#/?c.Source=TAOYUAN&c.Category=Apps&c.Module=MOS-DRS&c.View=dashboard&c.KPILevel=%7B%22level%22:4,%22user%22:%22fab_leader%22,%22label%22:%22%22,%22kpiEnv%22:%22PROD%22,%22unsubscribe%22:null%7D" target="_blank" class="btn btn-secondary" type="button">KPI Dashboard</a>
+      </div><hr class="dropdown-divider">
+      <div class="d-grid gap-2 d-md-block">
+        <a href="http://edc.micron.com/F11/FAB011/Lists/110S%20Lots%20QDR/Allitemsg.aspx#InplviewHash841e02ae-b970-4b25-9bc6-0e63a9045e07=ShowInGrid%3DTrue" target="_blank" class="btn btn-outline-info" type="button">110s_QDR</a>
+        <a href="http://edc.micron.com/F11/FAB011/Lists/140%20QDR%20Request%20Form%20%20Data%20keep%203%20month/140S.aspx" target="_blank" class="btn btn-outline-info" type="button">140s_QDR</a>
+        <a href="https://app.powerbi.com/groups/me/reports/0ab73ec8-4536-48e2-bc3a-b45739acd01b/ReportSection?ctid=f38a5ecd-2813-4862-b11b-ac1d563c806f" target="_blank" class="btn btn-outline-info" type="button">On wafer登記</a>
+        <a href="https://apps.powerapps.com/play/d0e050ef-2699-463b-9b59-c2c5a011f437?tenantId=f38a5ecd-2813-4862-b11b-ac1d563c806f&source=portal&screenColor=rgba%2837%2c%2062%2c%20143%2c%201%29" target="_blank" class="btn btn-outline-info" type="button">滑片登記</a>
+        <a href="http://tywpeetest1/PEE/WaferScrap/main.asp" target="_blank" class="btn btn-outline-info" type="button">破片</a>
+        <a href="http://webtest.tytw.micron.com/MFGWeb/#/?c.Category=Apps&c.Module=Blueprint&c.Source=FAB%2011&c.SopState=ACTIVE&c.view=checklist&c.MfgAreaId=F11%20DRY%20ETCH&c.EquipmentVendor=TEL" target="_blank" class="btn btn-outline-info" type="button">BluePrint-填寫</a>
+        <a href="https://analytics/#/site/OCT/views/Global_BP_Dashboard/BlueprintDash/maxtuan@na.micron.com/F11_DE_TEL?:iid=1" target="_blank" class="btn btn-outline-success" type="button">BluePrint-交接</a>
+        <a href="https://microncorp.sharepoint.com/sites/grpMTTWDEAMATTELoneteam/Lists/NST%20tool%20parts/AllItems.aspx?env=WebViewList" target="_blank" class="btn btn-outline-secondary" type="button">殺肉廠</a>
+        <a href="DOWNPARTS.htm" class="btn btn-outline-secondary">常領用料件列表</a>
+        <!-- <button class="btn btn-outline-secondary">123</button> -->
+        <!--<button type="button" id="button" class="btn btn-primary" onclick="setColor(event);const el = document.querySelector('.iframes [name=DownParts]');
+        el.style.display = el.style.display === 'none' ? '' : 'none';" data-count="1"/>DownParts</button>-->
+      </div>
+    </div><hr class="dropdown-divider">
+    <div class="iframes">
+      <iframe allowfullscreen style="display: none" frameborder="1" height="600" width=100% name="DownParts" src="DOWNPARTS.htm"></iframe>
+  </div>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-gk99" rowspan="2">Serise</th>
+            <th class="tg-gk99" rowspan="2">WS</th>
+            <th class="tg-gk99" rowspan="2">Step</th>
+            <th class="tg-gk99" rowspan="2">RF time</th>
+            <th class="tg-gk99" rowspan="2">TO</th>
+            <th class="tg-gk99" rowspan="2">PM season before qual</th>
+            <th class="tg-gk99" rowspan="2">PMON/ER</th>
+            <th class="tg-gk99" rowspan="2">season before TR</th>
+          </tr>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-eetp" rowspan="14">110s</td>
+            <td class="tg-8p5g">11-DRY_CU_SCCM</td>
+            <td class="tg-8p5g">5030-6R VIA OXIDE DRYETCH</td>
+            <td class="tg-r58f">120</td>
+            <td class="tg-r58f" rowspan="5">John Chen</td>
+            <td class="tg-xeof">Sequencename:F15_DUMMY <br>10*bare Si (595)<br>Sequence name:B166ROX1C1 <br>10*bare Si (595)<br>pump down一定要流helium 3hr在SN<br>不然ESC會arcing</td>
+            <td class="tg-xeof">PMON_TWDEBPM-SI-FL12<br>ER_TWDEBEROXIDFL09</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">11-DRY_OX_DRMP_LA</td>
+            <td class="tg-8p5g">5030-18 PERIPH INSITUDRY ETCH</td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-xeof" rowspan="4">Sequence name:DEKTDR63<br>50*bare Si (549)</td>
+            <td class="tg-xeof" rowspan="4">PMON_TWDEBPMBAREET03<br>ER_TWDEBERFCVDNT06<br>ER_TWDEBER-RSTRS04</td>
+            <td class="tg-xeof">Sequencename:B1618INB3<br>100*bare Si (549) </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g" rowspan="3">11-DRY_OX_DRMP_SP</td>
+            <td class="tg-8p5g">5030-53 SPACER OXIDEDRY ETCH </td>
+            <td class="tg-r58f">470</td>
+            <td class="tg-xeof" rowspan="3">Sequence name:DOEN-WARM-UP_X<br>25*bare Si (549) </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">5030-53 SPACER NITRIDE DRY ETCH </td>
+            <td class="tg-r58f">470</td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">5030-54 SPACER OXIDE DRY ETCH 2</td>
+            <td class="tg-r58f">310</td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g" rowspan="2">11-DRY_OX_SDRM_MLD</td>
+            <td class="tg-8p5g">5030-21 ARRAY SPACEROXIDE DRY ETCH </td>
+            <td class="tg-r58f">412</td>
+            <td class="tg-r58f" rowspan="4">Jingda Chen</td>
+            <td class="tg-xeof">Sequencename:B1621SO2G1<br>25*bare Si (440)</td>
+            <td class="tg-xeof" rowspan="2">PMON_TWDEBPMNITRFL01<br>ER_TWDEBERFCVDNT04<br>ER_TWDEBER-RSTRS05</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">3500-29 RAD MLR DRY ETCH </td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-xeof">Sequencename:CELCLEAN<br>5*bare Si (440)<br>Sequence nameDEKRT70<br>20*bare Si (440)</td>
+            <td class="tg-9h7j">Sequencename:B1629DD1B1<br>25*bare Si (440) </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">11-DRY_OX_SDRM</td>
+            <td class="tg-8p5g">5030-54 SPACER OXIDEDRY ETCH </td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-xeof">Sequencename:CELCLEAN<br>5*bare Si (440)<br>Sequence nameDEKRT70<br>45*bare Si (440)</td>
+            <td class="tg-xeof">PMON_TWDEBPMNITRFL01<br>ER_TWDEBERFCVDNT04<br>ER_TWDEBER-RSTRS05</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">11-DRY_NIT_SDRM_EB</td>
+            <td class="tg-8p5g">5030-20 STI NITRIDEDRY ETCH</td>
+            <td class="tg-r58f">370</td>
+            <td class="tg-xeof">Sequencename:B1620_N2SN60S_X  <br>25*bare Si (440)</td>
+            <td class="tg-xeof">PMON_TWDEBPMNITRFL01<br>ER_TWDEBERFCVDNT04<br>ER_TWDEBER-RSTRS05</td>
+            <td class="tg-xeof">ifreplace ESC <br>Sequence name: B1620_N2SN60S_X <br>75*bare Si (440)</td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g" rowspan="2">11-DRY_OX_SDRM2</td>
+            <td class="tg-8p5g">5030-21 ARRAY OXIDEDRY ETCH </td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-r58f" rowspan="2">Erictsai</td>
+            <td class="tg-xeof" rowspan="2">Sequence name:PM-RECOVER-PMX<br>25*PR 510 </td>
+            <td class="tg-xeof" rowspan="2">PMON_TWDEBPM-RSTPR29<br>ER_TWDEBER-RSTFL01<br>ER_TWDEBERNITRFL15<br>ER_TWDEBERNIT54SO2</td>
+            <td class="tg-9h7j" rowspan="2">new rule:<br>season 510* 50 pcs -&gt; TR 140s 29 ( 如果沒140s 29 lot 就跳過) -&gt; TR 110S21<br>TAS2BE0100/D0100 ( 不run 140s 29 )<br>(29 recipe:ENG_29DUMMY)<br><br>for 110s 29 step7 EPD time high,SN 110s 29 POR recipe 510* 50pcs<br><br></td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">5030-29 RAD INSITU DRY ETCH </td>
+            <td class="tg-r58f">400</td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">11-DRY_PLY_VESTA-NV4</td>
+            <td class="tg-8p5g">5030-42 CONTAINERPOLY DRY ETCH </td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-r58f">Allen Chang</td>
+            <td class="tg-xeof">Sequencename: PM_DUMMY<br>25*Oxide (433) </td>
+            <td class="tg-xeof">PMON_TWDEBPMBAREET42<br>ER_TWDEBERNIT3RATE<br>ER_TWDEBERTESBRATE</td>
+            <td class="tg-xeof">ifreplace ESC <br>Sequence name: PM_DUMMY<br>100*Oxide (433)</td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">11-DRY_OX_VIGUS-RK3</td>
+            <td class="tg-8p5g">5030-49 CONTACT OXIDEDRY ETCH </td>
+            <td class="tg-r58f">640</td>
+            <td class="tg-r58f" rowspan="2">JerryChien</td>
+            <td class="tg-xeof">Sequencename: DUMMY_49OXV1<br>25*bare Si (439)</td>
+            <td class="tg-xeof">PMON_TWDEBPM-SI-FLMF_01<br>ER_TWDEBEROXID49OX_02</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+          <tr>
+            <td class="tg-8p5g">11-DRY_OX_VIGUS-RK3_HARC</td>
+            <td class="tg-8p5g">5030-60 CONTACTINTEGRATED DRY ETCH </td>
+            <td class="tg-r58f">275</td>
+            <td class="tg-xeof">Sequencename:PM_DUMMY<br>25*bare Si (439)  </td>
+            <td class="tg-xeof">PMON_TWDEBPM-SI-FLMA<br>ER_TWDEBEROXIDFLME</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+          <tr>
+            <td class="tg-w452" rowspan="14">140s</td>
+            <td class="tg-ohw7">11-DRY_OX_SDRM2_CELL</td>
+            <td class="tg-ohw7">3500-AC SPACER OXIDEDRY ETCH</td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-r58f" rowspan="2">Allen Chang</td>
+            <td class="tg-xeof" rowspan="2">Sequence name:PM-RECOVER-PMX<br>25* PR (510)</td>
+            <td class="tg-xeof" rowspan="2">PMON_TWDEBPM-RSTPR29<br>ER_TWDEBER-RSTFL01<br>ER_TWDEBERNITRFL15</td>
+            <td class="tg-xeof" rowspan="2">if open chamber do PM or troubleshooting,recover rule<br>1.Sequence name:PM-RECOVER-PMX 25* PR (510)<br>2. Qual test<br>3.TR AC /22<br>4.Sequence name:PM-RECOVER-PMX 25* PR (510)</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">11-DRY_OX_SDRM2_140</td>
+            <td class="tg-ohw7">5030-22 STI NITRIDEDRY ETCH</td>
+            <td class="tg-r58f">400</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7" rowspan="3">11-DRY_OX_SDRM2</td>
+            <td class="tg-ohw7">3500-58 LI INSITU DRYETCH</td>
+            <td class="tg-r58f">400</td>
+            <td class="tg-r58f" rowspan="3">Erictsai</td>
+            <td class="tg-xeof" rowspan="3">Sequence name:PM-RECOVER-PMX<br>25*PR 510 </td>
+            <td class="tg-xeof" rowspan="3">PMON_TWDEBPM-RSTPR29<br>ER_TWDEBER-RSTFL01<br>ER_TWDEBERNITRFL15<br>ER_TWDEBERNIT54SO2</td>
+            <td class="tg-9h7j" rowspan="3">new rule:<br>season 510* 50 pcs -&gt; TR 140s 29 ( 如果沒140s 29 lot 就跳過) -&gt; TR 110S21<br>TAS2BE0100/D0100 ( 不run 140s 29 )<br>(29 recipe:ENG_29DUMMY)<br><br>for 110s 29 step7 EPD time high,SN 110s 29 POR recipe 510* 50pcs<br><br></td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">3500-29 RAD MLR DRY ETCH</td>
+            <td class="tg-r58f">400</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">3500-54 BL MLR DRY ETCH</td>
+            <td class="tg-r58f">400</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">11-DRY_OX_SDRM_29</td>
+            <td class="tg-ohw7">3500-29 RAD SPACER OXIDE DRYETCH </td>
+            <td class="tg-r58f">410</td>
+            <td class="tg-r58f">Jingda Chen</td>
+            <td class="tg-xeof">Sequencename:PM-RECOVER-PMX<br>4*bare Si (440) + 4* PR (510)<br><br>測PD前請followNPPC*10--&gt;idle 30mins--&gt;dry clean(440)*2PCS<br>(dry clean請單獨下,勿用PD去帶dry clean wafer)<br><br>若是沒有SN PR(510)會導致ER mean high</td>
+            <td class="tg-xeof">PMON_TWDEBPMNITRFL54<br>ER_TWDEBEROXIDFLMJ</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7" rowspan="3">11-DRY_OX_SDRM_SP_LT</td>
+            <td class="tg-ohw7">5030-49 CONTACTNITRIDE DRY ETCH </td>
+            <td class="tg-r58f">410</td>
+            <td class="tg-r58f" rowspan="7">John Chen</td>
+            <td class="tg-xeof" rowspan="7">TWB_DE_WUNITRD440:25_AD<br>recipe name: L4653SN2</td>
+            <td class="tg-xeof" rowspan="7">PMON_TWDEBPMNITRFLMR<br>ER_TWDEBERNIT53SPN<br>ER_TWDEBERNIT54SO2</td>
+            <td class="tg-xeof" rowspan="3">1.TR53SPN/53SPN2 first<br>2.season 49 then TR 49<br>3.if replace CEL(SP CEL)不能auto trace</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">5030-53 SPACER NITRIDE DRY ETCH </td>
+            <td class="tg-r58f">410</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">5030-53 SPACER NITRIDE DRY ETCH 2 </td>
+            <td class="tg-r58f">410</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7" rowspan="4">11-DRY_OX_SDRM_SP</td>
+            <td class="tg-ohw7">5030-53 SPACERNITRIDE DRY ETCH </td>
+            <td class="tg-r58f">410</td>
+            <td class="tg-9h7j" rowspan="4">1.TR53SPN/53SPN2 first<br>2.if replace new CEL,SN 2 lot TR 53SPN/53SPN2,don't TR 53 SPO/54SPO2</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">5030-53 SPACER NITRIDE DRY ETCH 2 </td>
+            <td class="tg-r58f">410</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">5030-53 SPACER OXIDE DRY ETCH </td>
+            <td class="tg-r58f">410</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">5030-54 SPACER OXIDE DRY ETCH 2 </td>
+            <td class="tg-r58f">410</td>
+          </tr>
+          <tr>
+            <td class="tg-ohw7">11-DRY_OX_VIGUS-RK3</td>
+            <td class="tg-ohw7">5030-49 CONTACT OXIDEDRY ETCH  </td>
+            <td class="tg-r58f">600</td>
+            <td class="tg-r58f">JerryChien</td>
+            <td class="tg-xeof">Sequencename:PM-RECOVER-PMX<br>10*bare Si (440)</td>
+            <td class="tg-xeof">PMON_TWDEBPM-SI-FLMF_01<br>ER_TWDEBEROXID49OX_02</td>
+            <td class="tg-xeof"> </td>
+          </tr>
+        </tbody>
+        </table> 
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="iframe.js"></script>
+        
+</body>
+
+</html>
